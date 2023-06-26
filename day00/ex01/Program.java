@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Program {
     public static boolean bol(int a) {
         int i = 2;
-        while(i*i<a){
+        while((i*i)-1<a){
             if(a % i != 0){
                 i++;
             }
@@ -18,7 +18,7 @@ public class Program {
     public static int iter(int a) {
         int iter = 1;
         int i = 2;
-        while(i*i < a){
+        while((i*i)-1 < a){
             if(a % i != 0){
                 iter++;
                 i++;
