@@ -41,5 +41,4 @@ public class Program {
         System.out.println("Count of coffee request - " + count);
         System.exit(0);
     }
-    
 }
