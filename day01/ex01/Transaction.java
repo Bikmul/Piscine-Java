@@ -1,4 +1,4 @@
-package Java.Piscine.day01.ex00;
+package Java.Piscine.day01.ex01;
 import java.util.UUID;
 
 public class Transaction {
