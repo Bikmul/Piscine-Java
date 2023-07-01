@@ -1,4 +1,4 @@
-package Java.Piscine.day01.ex01;
+package Java.Piscine.day01.ex03;
 import java.util.UUID;
 
 public class Transaction {
@@ -23,6 +23,7 @@ public class Transaction {
             else{
                 recipient.setmoney(recipient.getmoney()+amount);
                 sender.setmoney(sender.getmoney()-amount);
+                printer(type);
                 return 1;
             }
         }
@@ -34,6 +35,7 @@ public class Transaction {
             else{
                 sender.setmoney(sender.getmoney()+amount);
                 recipient.setmoney(recipient.getmoney() - amount);
+                printer(type);
                 return 1;
             }
         }
@@ -50,10 +52,10 @@ public class Transaction {
     public void setRecipient(User recipient){
         this.recipient = recipient;
     }
-    public void amount(int amount){
+    public void setamount(int amount){
         this.amount = amount;
     }
-    public void type(String type){
+    public void settype(String type){
         this.type = type;
     }
     public User getSender(){
@@ -70,5 +72,15 @@ public class Transaction {
     }
     public String gettype(){
         return type;
+    }
+    public void printer(String type){
+        System.out.printf("%-8s", sender.getname());
+        System.out.printf("to ");
+        System.out.printf("%-8s", recipient.getname());
+        System.out.printf("|");
+        System.out.printf("%-8s", type);  
+        System.out.printf("|");
+        System.out.printf("%-8s", amount);      
+        System.out.println();
     }
 }

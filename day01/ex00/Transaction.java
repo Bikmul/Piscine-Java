@@ -41,34 +41,34 @@ public class Transaction {
             return 0;
     }
     
-    void setUuid(UUID uuid){
+    public void setUuid(UUID uuid){
         this.uuid = uuid;
     }
-    void setSender(User sender){
+    public void setSender(User sender){
         this.sender = sender;
     }
-    void setRecipient(User recipient){
+    public void setRecipient(User recipient){
         this.recipient = recipient;
     }
-    void amount(int amount){
+    public void amount(int amount){
         this.amount = amount;
     }
-    void type(String type){
+    public void type(String type){
         this.type = type;
     }
-    User getSender(){
+    public User getSender(){
         return sender;
     }
-    User getRecipient(){
+    public User getRecipient(){
         return recipient;
     }
-    int getamount(){
+    public int getamount(){
         return  amount;
     }
-    UUID getUuid(){
+    public UUID getUuid(){
         return uuid;
     }
-    String gettype(){
+    public String gettype(){
         return type;
     }
 }
