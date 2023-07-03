@@ -26,7 +26,9 @@ public class Program {
     service.getUserTransactions(4);
     service.getUserTransactions(2);
     service.getUserTransactions(5);
-    // service.printallTransactions();
+
+    service.printallTransactions();
+    
     service.printallUsers();
 
     }
