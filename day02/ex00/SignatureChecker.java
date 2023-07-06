@@ -1,17 +1,11 @@
-package Java.Piscine.day02.ex00;
-import java.io.InputStream;
-import java.util.ArrayList;
 
-import Signature;
+import java.io.InputStream;
 
 
 public class SignatureChecker {
     private InputStream inputStream;
     private char [] signatureBuffer;
 
-    private SignatureChecker() {
-
-    }
 
     public SignatureChecker(InputStream inputStream) {
         this.inputStream = inputStream;

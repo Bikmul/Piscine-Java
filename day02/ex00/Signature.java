@@ -1,9 +1,5 @@
-package Java.Piscine.day02.ex00;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
-
-import Java.Piscine.day02.ex00.SignatureScannerFormatException;
 
 public class Signature {
     public final static int MAX_SIGNATURE_SIZE = 20;

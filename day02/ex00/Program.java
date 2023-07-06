@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Program {
-    private static final String outputFile = "result.txt";
+    private static final String outputFile = "Java\\Piscine\\day02\\ex00\\result.txt";
 
     public static void main(String[] args) {
         FileInputStream fileInputStream = null;
         Scanner console = new Scanner(System.in);
+        int c = 0;
         System.out.println("Enter signature.txt path: ");
         String filename = console.nextLine();
         try {
@@ -50,24 +51,28 @@ public class Program {
         while (!currentInput.equals("42")) {
             System.out.println("Enter file path: ");
             currentInput = console.nextLine();
-            try {
-                fileInputStream = new FileInputStream(currentInput);
-            } catch (java.io.FileNotFoundException fileNotFoundException) {
-                System.out.println("Error: File not found");
-                continue;
-            }
-            boolean isSignatureFound = false;
-            SignatureChecker signatureChecker = new SignatureChecker(fileInputStream);
-            for (int i = 0; i < signatures.size(); ++i) {
-                if (signatureChecker.checkSignature(signatures.get(i))) {
-                    signatures.get(i).display(fileOutputStream);
-                    System.out.println("PROCESSED");
-                    isSignatureFound = true;
-                    break;
+            if(currentInput.equals("42"))
+                c = 1;
+            if(c == 0){
+                try {
+                    fileInputStream = new FileInputStream(currentInput);
+                } catch (java.io.FileNotFoundException fileNotFoundException) {
+                    System.out.println("Error: File not found");
+                    continue;
                 }
-            }
-            if (!isSignatureFound) {
-                System.out.println("UNDEFINED");
+                boolean isSignatureFound = false;
+                SignatureChecker signatureChecker = new SignatureChecker(fileInputStream);
+                for (int i = 0; i < signatures.size(); ++i) {
+                    if (signatureChecker.checkSignature(signatures.get(i))) {
+                        signatures.get(i).display(fileOutputStream);
+                        System.out.println("PROCESSED");
+                        isSignatureFound = true;
+                        break;
+                    }
+                }
+                if (!isSignatureFound) {
+                    System.out.println("UNDEFINED");
+                }
             }
             try {
                 fileInputStream.close();
