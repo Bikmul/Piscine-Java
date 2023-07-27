@@ -10,4 +10,4 @@ mkdir target
 javac src/java/edu/school21/printer/*/*.java -d ./target
 
 # specify where to find user class files
-java -classpath target edu.school21.printer.app.Program . 0 /Users/jnidorin/Downloads/it.bmp
+java -classpath target edu.school21.printer.app.Program . 0 /Users/dtwanda/Downloads/it.bmp
