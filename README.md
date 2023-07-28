@@ -46,6 +46,23 @@
 32. javax.sql.DataSource - Фабрика подключений к физическому источнику данных
 
 32. java.time.LocalDateTime - использование времени
+
+
+33. org.junit.Before - параметр
+34. org.junit.jupiter.api.BeforeEach - использование метода перед каждым @
+35. org.junit.jupiter.api.Test - тест
+36. org.junit.Assert - проверка 
+37. org.junit.jupiter.params.ParameterizedTest - выполнить тест несколько раз, но с разными аргументами
+38. org.junit.jupiter.params.provider.CsvFileSource - читаем токены CSV из файла
+39. org.junit.jupiter.params.provider.ValueSource - Она определяет один массив значений
+40. org.junit.jupiter.api.Assertions - проверки
+41. org.junit.jupiter.api.AfterEach - параметр 
+42. org.junit.jupiter.api.Assertions.assertThrows - проверти в выводом ошибок
+
+42. org.springframework.jdbc.datasource.embedded.EmbeddedDatabase - Конструктор, предоставляющий удобный API для построения встроенной базы данных.
+43. org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder - это конструктор Spring, который предоставляет удобный API для создания встроенной базы данных в приложении Spring.
+44. org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType - тип дб
+
 ### Описание задан
 1. [Day 00](https://github.com/CreativeWex/42-Java-Piscine/tree/master/Day00) - тривиальные бизнес-задачи с использованием базовых конструкций языка Java, обработка данных.
 
